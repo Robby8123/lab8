@@ -1,11 +1,10 @@
-#include "Circle.h"
-
-const double Circle::PI = 3.14;
-
-Circle::Circle() : Circle(0) {}
-
-Circle::Circle(double radius) : radius_(radius) {}
+#include "circle.h"
+#include <cmath>
 
 double Circle::getArea() const {
-    return PI * radius_ * radius_;
+    return M_PI * m_radius * m_radius;
+}
+
+const char* Circle::printName() const {
+    return "Circle";
 }
