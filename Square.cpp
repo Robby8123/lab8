@@ -1,9 +1,9 @@
-#include "Square.h"
-
-Square::Square() : Square(0) {}
-
-Square::Square(double side) : side_(side) {}
+#include "square.h"
 
 double Square::getArea() const {
-    return side_ * side_;
+    return m_side * m_side;
+}
+
+const char* Square::printName() const {
+    return "Square";
 }
