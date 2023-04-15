@@ -1,15 +1,17 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "Shape.h"
+#include "shape.h"
 
 class Square : public Shape {
 public:
-    Square();
-    explicit Square(double side);
+    Square(double side) : m_side(side) {}
     double getArea() const override;
+    const char* printName() const override;
+
 private:
-    double side_;
+    double m_side;
 };
 
-#endif
+#endif // SQUARE_H
+
