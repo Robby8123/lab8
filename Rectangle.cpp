@@ -1,8 +1,9 @@
-#include "Rectangle.h"
-
-Rectangle::Rectangle() : Rectangle(0, 0) {}
-
-Rectangle::Rectangle(double length, double width) : length_(length), width_(width) {}
+#include "rectangle.h"
 
 double Rectangle::getArea() const {
-    return length_ * width_;
+    return m_length * m_width;
+}
+
+const char* Rectangle::printName() const {
+    return "Rectangle";
+}
