@@ -1,16 +1,17 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "Shape.h"
+#include "shape.h"
 
 class Rectangle : public Shape {
 public:
-    Rectangle();
-    Rectangle(double length, double width);
+    Rectangle(double length, double width) : m_length(length), m_width(width) {}
     double getArea() const override;
+    const char* printName() const override;
+
 private:
-    double length_;
-    double width_;
+    double m_length, m_width;
 };
 
-#endif
+#endif // RECTANGLE_H
+
